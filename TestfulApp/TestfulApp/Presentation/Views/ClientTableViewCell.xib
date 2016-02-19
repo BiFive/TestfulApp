@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="KGk-i7-Jjw" customClass="ClientTableViewCell" customModule="TestfulApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Em7-1C-ITI">
+                        <rect key="frame" x="8" y="8" width="80" height="80"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="QkL-wQ-4So"/>
+                            <constraint firstAttribute="width" constant="80" id="kDE-QK-D6U"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Appleseed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4B-Tm-c5z">
+                        <rect key="frame" x="96" y="8" width="136" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="8cW-yc-Eqh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:55 PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z15-0s-myM">
+                        <rect key="frame" x="232" y="8" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="fuL-PP-13y"/>
+                            <constraint firstAttribute="width" constant="80" id="uYu-9i-9oj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 5 messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfe-AD-r3t">
+                        <rect key="frame" x="96" y="66" width="216" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="A0w-Ww-iDr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.98431372549019602" green="0.31764705882352939" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPQ-iV-iBM">
+                        <rect key="frame" x="96" y="35" width="216" height="23"/>
+                        <string key="text">Each spring, resorts close with their entire mountain covered in soft, slushy snow, and they open up in the fall with one crusty, crowded run</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="z15-0s-myM" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="9A5-3r-J7T"/>
+                    <constraint firstItem="g4B-Tm-c5z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="AgK-7F-S9e"/>
+                    <constraint firstItem="Em7-1C-ITI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Eit-CD-4Ui"/>
+                    <constraint firstItem="z15-0s-myM" firstAttribute="leading" secondItem="g4B-Tm-c5z" secondAttribute="trailing" id="QR0-x6-5Rq"/>
+                    <constraint firstItem="nPQ-iV-iBM" firstAttribute="leading" secondItem="Em7-1C-ITI" secondAttribute="trailing" constant="8" id="TEi-9Z-rMf"/>
+                    <constraint firstItem="nPQ-iV-iBM" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="VLR-ec-dl8"/>
+                    <constraint firstItem="Em7-1C-ITI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bAs-hg-Crg"/>
+                    <constraint firstItem="Tfe-AD-r3t" firstAttribute="top" secondItem="nPQ-iV-iBM" secondAttribute="bottom" constant="8" id="iHc-1D-qjQ"/>
+                    <constraint firstItem="Tfe-AD-r3t" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="kcz-xo-cdY"/>
+                    <constraint firstItem="Tfe-AD-r3t" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="lFS-4o-uFw"/>
+                    <constraint firstItem="g4B-Tm-c5z" firstAttribute="leading" secondItem="Em7-1C-ITI" secondAttribute="trailing" constant="8" id="mNh-rR-orv"/>
+                    <constraint firstItem="nPQ-iV-iBM" firstAttribute="top" secondItem="g4B-Tm-c5z" secondAttribute="bottom" constant="6" id="mzu-kF-LlC"/>
+                    <constraint firstItem="z15-0s-myM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="oo1-dz-fiN"/>
+                    <constraint firstItem="Tfe-AD-r3t" firstAttribute="leading" secondItem="Em7-1C-ITI" secondAttribute="trailing" constant="8" id="t1f-bR-UG0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImage" destination="Em7-1C-ITI" id="S1x-P2-XFA"/>
+                <outlet property="countUnreadMessageLabel" destination="Tfe-AD-r3t" id="R8h-el-xTf"/>
+                <outlet property="messageDateLabel" destination="z15-0s-myM" id="tZl-r1-aLt"/>
+                <outlet property="messageTextLabel" destination="nPQ-iV-iBM" id="xl3-Wv-491"/>
+                <outlet property="nameLabel" destination="g4B-Tm-c5z" id="WWy-U0-8gh"/>
+                <outletCollection property="viewsForCalculatingHeight" destination="g4B-Tm-c5z" collectionClass="NSMutableArray" id="I4g-Wd-EeB"/>
+                <outletCollection property="viewsForCalculatingHeight" destination="Tfe-AD-r3t" collectionClass="NSMutableArray" id="4Rk-2I-WSe"/>
+                <outletCollection property="constraintsForCalculatingHeight" destination="iHc-1D-qjQ" collectionClass="NSMutableArray" id="IjW-IF-Fr4"/>
+                <outletCollection property="constraintsForCalculatingHeight" destination="mzu-kF-LlC" collectionClass="NSMutableArray" id="RKH-x3-eKc"/>
+                <outletCollection property="constraintsForCalculatingHeight" destination="AgK-7F-S9e" collectionClass="NSMutableArray" id="IFi-73-oAY"/>
+                <outletCollection property="constraintsForCalculatingHeight" destination="kcz-xo-cdY" collectionClass="NSMutableArray" id="mO5-Ln-ESv"/>
+            </connections>
+            <point key="canvasLocation" x="406" y="514"/>
+        </tableViewCell>
+    </objects>
+</document>
