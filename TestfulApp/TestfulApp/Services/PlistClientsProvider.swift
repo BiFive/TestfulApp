@@ -12,17 +12,17 @@ class PlistClientsProvider: AbstractClientsProvider {
 
     enum PlistKeys : String {
         case Fullname = "fullname"
-        case Identifier = "fullName"
+        case Identifier = "identifier"
         case AvatarURL = "avatarURL"
-        case MessageText = "messages"
+        case MessageText = "message"
         case SendingDate = "sendingDate"
-        case UnreadMessageCount = "unreadMessageCount"
+        case UnreadMessageCount = "unreadMessagesCount"
     }
     
     static let keysAndClientTags = [
         (PlistKeys.Fullname.rawValue, Client.FieldTag.Fullname),
         (PlistKeys.Identifier.rawValue, Client.FieldTag.Identifier),
-        (PlistKeys.AvatarURL.rawValue, Client.FieldTag.AvatarURL),
+        (PlistKeys.AvatarURL.rawValue, Client.FieldTag.AvatarPath),
         (PlistKeys.UnreadMessageCount.rawValue, Client.FieldTag.UnreadMessageCount)
     ]
     

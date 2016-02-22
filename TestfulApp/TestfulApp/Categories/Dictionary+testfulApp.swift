@@ -10,6 +10,7 @@ import UIKit
 
 extension Dictionary {
     func getValueForKey<T>(key: Key, withDefaultValue defaultValue: T) -> T {
+        NSLog("self[\(key)] = \(self[key])")
         if let value = self[key] as? T {
             return value
         } else {

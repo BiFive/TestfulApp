@@ -13,7 +13,7 @@ class Client: NSObject {
     enum FieldTag : String {
         case Fullname = "fullname"
         case Identifier = "fullName"
-        case AvatarURL = "avatarURL"
+        case AvatarPath = "AvatarPath"
         case Messages = "messages"
         case UnreadMessageCount = "unreadMessageCount"
     }
@@ -25,10 +25,13 @@ class Client: NSObject {
     let messages: [Message]
     
     init(dictionary : [FieldTag : AnyObject]) {
-        
         self.fullname = dictionary.getValueForKey(.Fullname, withDefaultValue: "")
         self.id = dictionary.getValueForKey(.Identifier, withDefaultValue: 0)
-        self.avatarUrl = dictionary.getValueForKey(.AvatarURL, withDefaultValue: nil)
+        if let avatarPath = dictionary[.AvatarPath] as? String {
+            self.avatarUrl = NSURL(string: avatarPath)
+        } else {
+            self.avatarUrl = nil
+        }
         self.messages = dictionary.getValueForKey(.Messages, withDefaultValue: [Message]())
         self.countUnreadMessages = dictionary.getValueForKey(.UnreadMessageCount, withDefaultValue: 0)
         super.init()

@@ -88,6 +88,10 @@
                 <outletCollection property="constraintsForCalculatingHeight" destination="mzu-kF-LlC" collectionClass="NSMutableArray" id="RKH-x3-eKc"/>
                 <outletCollection property="constraintsForCalculatingHeight" destination="AgK-7F-S9e" collectionClass="NSMutableArray" id="IFi-73-oAY"/>
                 <outletCollection property="constraintsForCalculatingHeight" destination="kcz-xo-cdY" collectionClass="NSMutableArray" id="mO5-Ln-ESv"/>
+                <outletCollection property="viewsForCalculatingWidth" destination="Em7-1C-ITI" collectionClass="NSMutableArray" id="kdg-yT-ubQ"/>
+                <outletCollection property="constraintsForCalculatingWidth" destination="Eit-CD-4Ui" collectionClass="NSMutableArray" id="agv-UA-0iS"/>
+                <outletCollection property="constraintsForCalculatingWidth" destination="TEi-9Z-rMf" collectionClass="NSMutableArray" id="HIL-yZ-WIM"/>
+                <outletCollection property="constraintsForCalculatingWidth" destination="VLR-ec-dl8" collectionClass="NSMutableArray" id="AM8-Zj-Q8O"/>
             </connections>
             <point key="canvasLocation" x="406" y="514"/>
         </tableViewCell>

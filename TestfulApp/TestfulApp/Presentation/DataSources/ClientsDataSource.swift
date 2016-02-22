@@ -15,6 +15,7 @@ class ClientsDataSource: NSObject, UITableViewDataSource {
     }
     
     var clients: [Client]?
+    var imageProvider: ImageProvider?
     
     func configureTableView(tableView: UITableView) {
         tableView.registerNib(ClientTableViewCell.cellNib(), forCellReuseIdentifier: CellIdentifiers.ClientCell.rawValue)
@@ -39,8 +40,23 @@ class ClientsDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifiers.ClientCell.rawValue, forIndexPath: indexPath) as! ClientTableViewCell
         if let client = self.clients?[indexPath.row] {
             cell.configure(client)
+            if let imageProvider = self.imageProvider, let imageUrl = client.avatarUrl {
+                imageProvider.provideImage(imageUrl, completition: { (image, error) -> Void in
+                    self.setImage(image, forCellAtIndexPath: indexPath, inTableView: tableView)
+                })
+            }
         }
         return cell
+    }
+    
+    //MARK: private utils
+    
+    func setImage(image: UIImage?, forCellAtIndexPath indexPath: NSIndexPath, inTableView tableView: UITableView) {
+        guard let image = image, let cell = tableView.cellForRowAtIndexPath(indexPath) as? ClientTableViewCell else {
+            return
+        }
+        
+        cell.setImageForAvatar(image)
     }
     
 }

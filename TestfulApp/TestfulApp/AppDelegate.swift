@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window = window
+        let navVC = UIStoryboard(name: "ClientsStoryboard", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        if let clientsVC = navVC.topViewController as? ClientsListViewController,
+            let clientsListURL = NSBundle.mainBundle().URLForResource("clientsData", withExtension: "plist") {
+            clientsVC.clientsProvider = PlistClientsProvider(plistURL: clientsListURL)
+
+        }
+        window.rootViewController = navVC
+        window.makeKeyAndVisible()
+        
         return true
     }
 

@@ -13,9 +13,9 @@ class ImageProvider: NSObject {
     var loader: ImageLoader
     var cache: ImageCache
     
-    init(imageLoader: ImageLoader, imageCache: ImageCache) {
-        self.loader = imageLoader
-        self.cache = imageCache
+    override init() {
+        self.loader = ImageLoader()
+        self.cache = ImageCache()
         super.init()
     }
     
@@ -39,6 +39,7 @@ class ImageProvider: NSObject {
                     }
                     
                     self.cache.saveUrlResponce(responce, withData: data, forUrlRequest: urlRequest)
+                    completition(image: UIImage(data: data), error: nil)
                 })
             }
         }
