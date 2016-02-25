@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let startupManager = StartupManager()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -23,10 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let clientsVC = navVC.topViewController as? ClientsListViewController,
             let clientsListURL = NSBundle.mainBundle().URLForResource("clientsData", withExtension: "plist") {
             clientsVC.clientsProvider = PlistClientsProvider(plistURL: clientsListURL)
-
         }
-        window.rootViewController = navVC
-        window.makeKeyAndVisible()
+        
+        self.startupManager.setupUI(window, rootViewController: navVC)
         
         return true
     }
