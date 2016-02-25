@@ -12,23 +12,21 @@ class ClientsListViewController: UIViewController, UITableViewDelegate {
 
     var dataSource: ClientsDataSource?
     var clientsProvider: AbstractClientsProvider?
-    var imageProvider: ImageProvider?
     
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let imageProvider = ImageProvider()
-        self.imageProvider = imageProvider
-        
         let dataSource = ClientsDataSource()
-        dataSource.imageProvider = imageProvider
+        dataSource.imageProvider = ImageProvider()
         dataSource.configureTableView(self.tableView)
         self.dataSource = dataSource
         
         self.tableView.dataSource = dataSource
         self.tableView.delegate = self
+        
+        self.setupTitle()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -42,7 +40,16 @@ class ClientsListViewController: UIViewController, UITableViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateData() {
+    private func setupTitle() {
+        let label = UILabel(frame: CGRectZero)
+        label.text = NSLocalizedString("ClientsList.Title.Chats", comment: "Title for clients list screen")
+        label.textColor = UIColor(red: 252.0/255.0, green: 101.0/255.0, blue: 84.0/255.0, alpha: 1.0)
+        label.sizeToFit()
+        
+        self.navigationItem.titleView = label
+    }
+    
+    private func updateData() {
         guard let clientsProvider = self.clientsProvider else {
             return
         }
@@ -62,15 +69,5 @@ class ClientsListViewController: UIViewController, UITableViewDelegate {
         }
         return dataSource.heightForRow(indexPath, tableView: tableView)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

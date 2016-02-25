@@ -23,18 +23,19 @@ class StartupManager: NSObject {
         startupViewController.transitioningDelegate = self.transitionDelegate
         rootViewController.presentViewController(startupViewController, animated: false, completion: nil)
         self.startupViewController = startupViewController
-        
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1.5 * Double(NSEC_PER_SEC)))
+    }
+    
+    func beginAppInitialization() {
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.didFinishAppInitialization()
+        }
+    }
+    
+    private func didFinishAppInitialization() {
+        if let rootViewController = self.rootViewController {
             rootViewController.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     
-    func didFinishAppInitialization() {
-        
-    }
-    
-    private func animateToRootViewController() {
-        
-    }
 }

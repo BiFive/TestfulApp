@@ -58,8 +58,7 @@ class ClientTableViewCell: UITableViewCell {
     }
     
     private func textForUnreadMessages(count: Int) -> String {
-        //TODO: localization
-        return "+ \(count) messages"
+        return String.localizedStringWithFormat(NSLocalizedString("ClientCell.+ %d message(s)", comment: "+Messages"), count)
     }
     
     //MARK: Class methods

@@ -17,20 +17,4 @@ class StartupViewController: UIViewController {
         self.logo.image = UIImage.animatedImageNamed("act", duration: 0.5)
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    private func setupAnimation() {
-//        var images = [UIImage]()
-//        for i in 1...6 {
-//            if let image = UIImage(named: "act\(i)") {
-//                images.append(image)
-//            }
-//        }
-        self.logo.image = UIImage.animatedImageNamed("act", duration: 0.5)
-    }
-
 }

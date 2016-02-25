@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         self.startupManager.setupUI(window, rootViewController: navVC)
-        
+        self.startupManager.beginAppInitialization()
         return true
     }
 
